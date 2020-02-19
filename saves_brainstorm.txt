@@ -1,0 +1,41 @@
+SAVE FORMAT
+TERRAIN{
+	trees:
+		(382.0, 0.0, 492.0)
+		(37.0, 0.0, 242.0)
+		(228.0, 0.0, -428.0)
+		(-475.0, 0.0, 234.0)
+		(189.0, 0.0, -190.0)
+	rocks:
+		(228.0, 0.0, -428.0)
+		(-475.0, 0.0, 234.0)
+		(189.0, 0.0, -190.0)
+	rivers:
+		//dunno how i would do this TBA
+	etc:	
+
+
+}
+
+
+CONSTRUCTIONS{
+	home:position=(0.0,0.0,0.0); 
+	tribal_shack:
+	castle:
+	etc:
+
+
+
+
+}
+
+creatures{
+TO BE ADDED -passive creatures
+}
+
+units{
+	ai:name="Chris_G_Gorbachev"; job=3;
+
+
+
+}

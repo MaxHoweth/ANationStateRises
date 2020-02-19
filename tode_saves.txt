@@ -1,0 +1,24 @@
+//// static instances(trees,rockes,terrain,etc)c(DOOOOOOONNNEEEEEE)
+
+
+/// Dynamic instances( homes,colonies,ais) need to have all of their component vales and stuff saved
+
+// colony info needs to be saved as well Wood count population techlevel etc
+
+// for ais youll need to save a lot of stff namely( job, tool and instantiate the tool with the AI,
+
+
+trees: 
+	(1407.0, 0.0, 655.0)
+	(450.0, 0.0, 1394.0)
+	(1305.0, 0.0, 1001.0)
+treePrefab(Clone);(431.0, 0.0, 984.0)
+treePrefab(Clone);(910.0, 0.0, 766.0)
+treePrefab(Clone);(763.0, 0.0, 1126.0)
+
+
+
+
+endtrees:
+
+

@@ -1,0 +1,60 @@
+
+
+make people suffer from hunder and thirst and begin the game with limited supplies of both of those
+
+add the structures Home, Shrine, and Baraacks
+
+Fix the jobs menu( 50% done still needs an indicator about which button is selected or what the ais current job is)
+
+
+
+think about the tech tree
+
+fix ai pathing script(allow stairs or ramps or something other than flat ground)
+
+add insoem type of enemy attack mechanic or something(will need defensive structures too)
+
+should Ais be able to have multiple jobs?(yes?, no?, maybe 1 backup job if youd be idle at thefirst one?, maybe havepeople have freetime hobbies?)
+
+make player given movement commands its own job( behind the scenes)
+
+add tool animations for harvesting wood and stone
+
+//   30 logs for a house
+
+
+
+add a king > champion > commoners with customiseable king and champions
+
+throughot the ages it could go 
+
+Leader > Chief  >  King 
+
+
+Leaders Hut  > > Castle
+
+2 ways to directly control people military recruitment( giving direct oreders 
+that are to be followed to a T) and enlightenment(go to shrine and pray etc)
+
+
+
+
+400, 1500
+400,400
+1500,400
+1500,1500
+
+
+
+
+
+
+add loadingboundary walls so when ais toch it it loads a new section
+
+
+
+
+
+
+
+

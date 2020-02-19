@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+	<ProductVersion>10.0.20506</ProductVersion>
+	<SchemaVersion>2.0</SchemaVersion>
+	<ProjectGuid>{A3A3EC3C-CD3B-F0E7-6159-99D696932C7E}</ProjectGuid>
+	<OutputType>Library</OutputType>
+	<AppDesignerFolder>Properties</AppDesignerFolder>
+	<RootNamespace></RootNamespace>
+	<AssemblyName>Assembly-CSharp</AssemblyName>
+	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+	<FileAlignment>512</FileAlignment>
+	<BaseDirectory>Assets</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	<DebugSymbols>true</DebugSymbols>
+	<DebugType>full</DebugType>
+	<Optimize>false</Optimize>
+	<OutputPath>Temp\bin\Debug\</OutputPath>
+	<DefineConstants>DEBUG;TRACE;UNITY_STANDALONE_WIN;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_MONO;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_GENERICS;ENABLE_SUBSTANCE;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;UNITY_4_3_3;UNITY_4_3;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN;UNITY_TEAM_LICENSE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>Temp\bin\Release\</OutputPath>
+	<DefineConstants>TRACE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+	<Reference Include="System" />
+    <Reference Include="System.XML" />
+	<Reference Include="System.Core" />
+	<Reference Include="System.Xml.Linq" />
+	<Reference Include="UnityEngine">
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	</Reference>
+	<Reference Include="UnityEditor">
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	</Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\Modules\Pathfinding\Grid.cs" />
+     <Compile Include="Assets\Modules\Pathfinding\Heap.cs" />
+     <Compile Include="Assets\Modules\Pathfinding\Node.cs" />
+     <Compile Include="Assets\Modules\Pathfinding\Pathfinding.cs" />
+     <Compile Include="Assets\Modules\Terrain Generation\Noise.cs" />
+     <Compile Include="Assets\Modules\Terrain Generation\mapDisplay.cs" />
+     <Compile Include="Assets\Modules\Terrain Generation\mapGenerator.cs" />
+     <Compile Include="Assets\Modules\Terrain Generation\terrainGenerator.cs" />
+     <Compile Include="Assets\Scripts\Ai.cs" />
+     <Compile Include="Assets\Scripts\Beacon.cs" />
+     <Compile Include="Assets\Scripts\ColonyBase.cs" />
+     <Compile Include="Assets\Scripts\EnemyAi.cs" />
+     <Compile Include="Assets\Scripts\Farm.cs" />
+     <Compile Include="Assets\Scripts\Mine.cs" />
+     <Compile Include="Assets\Scripts\TeraainScript.cs" />
+     <Compile Include="Assets\Scripts\camTarget.cs" />
+     <Compile Include="Assets\Scripts\cameraOperator.cs" />
+     <Compile Include="Assets\Scripts\createStructure.cs" />
+     <Compile Include="Assets\Scripts\deer.cs" />
+     <Compile Include="Assets\Scripts\gui.cs" />
+     <Compile Include="Assets\Scripts\home.cs" />
+     <Compile Include="Assets\Scripts\ingameTextBubble.cs" />
+     <Compile Include="Assets\Scripts\jobsController.cs" />
+     <Compile Include="Assets\Scripts\loadWallController.cs" />
+     <Compile Include="Assets\Scripts\loadingTriggerWall.cs" />
+     <Compile Include="Assets\Scripts\menuGui.cs" />
+     <Compile Include="Assets\Scripts\movementMArker.cs" />
+     <Compile Include="Assets\Scripts\networkController.cs" />
+     <Compile Include="Assets\Scripts\saveLoad.cs" />
+     <Compile Include="Assets\Scripts\scienceGui.cs" />
+     <Compile Include="Assets\Scripts\scienceMenuCam.cs" />
+     <Compile Include="Assets\Scripts\selectableItem.cs" />
+     <Compile Include="Assets\Scripts\shrine.cs" />
+     <Compile Include="Assets\Scripts\stockPile.cs" />
+     <Compile Include="Assets\Scripts\stone_block.cs" />
+     <Compile Include="Assets\Scripts\tree.cs" />
+     <Compile Include="Assets\Scripts\tribal_barracks.cs" />
+     <Compile Include="Assets\prefabs\LOD.cs" />
+     <Compile Include="Assets\stockpile.cs" />
+     <Compile Include="Assets\sun.cs" />
+     <None Include="Assets\savestest.txt" />
+     <None Include="Assets\Resources\saves\test\test.txt" />
+     <None Include="Assets\Resources\saves\thin_trees_1\thin_trees_1.txt" />
+ <Reference Include="Assembly-UnityScript-firstpass">
+ <HintPath>Library\ScriptAssemblies\Assembly-UnityScript-firstpass.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass-vs.csproj">
+      <Project>{33DCDDCB-6A34-87E3-D3E6-528216CA18FE}</Project>      <Name>Assembly-CSharp-firstpass-vs</Name>    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	   Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>

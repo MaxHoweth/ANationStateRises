@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 0
+    path: Assets/WorldView.unity
+  - enabled: 0
+    path: Assets/GameWorld1.unity
+  - enabled: 0
+    path: Assets/template_world.unity
+  - enabled: 1
+    path: Assets/scenes/menu.unity
+  - enabled: 1
+    path: Assets/scenes/GameWorld1.unity
+  - enabled: 1
+    path: Assets/scenes/template_world.unity

@@ -1,0 +1,14 @@
+﻿<Properties StartupItem="Assembly-UnityScript-firstpass.csproj" RefactoringSettings.EnableRefactorings="True">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Modules\Pathfinding\Node.cs">
+    <Files>
+      <File FileName="Assets\Modules\Pathfinding\Grid.cs" Line="32" Column="7" />
+      <File FileName="Assets\Modules\Pathfinding\Node.cs" Line="24" Column="11" />
+      <File FileName="Assets\Modules\Pathfinding\Pathfinding.cs" Line="53" Column="50" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

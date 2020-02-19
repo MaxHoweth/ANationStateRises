@@ -1,0 +1,12 @@
+firt tech is fire 4 research
+each Ai generates a tiny bit of researh jusut being alive(Really low)
+
+then agriculture or basic tools you choose in the research menu
+
+	    Fire(Cooking)
+	      |
+Basic Stone Tools - Agriculture - Animal Husbandry
+	      |
+Basic Wood Construction( Tribal Shack ) 
+	      |
+Simple Religion( Shrine )

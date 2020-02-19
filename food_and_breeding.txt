@@ -1,0 +1,6 @@
+For breeding 
+sothere wil be an AI++ int called faith
+once it gets over 100 or whatever make the ai walk to the nearest shrine and pray as a job for a lil while
+then if he has a home and is not alone in it one of them will pop out a kid
+
+

@@ -1,0 +1,308 @@
+fileFormatVersion: 2
+guid: 7f074bbc49fae6e42960bd38f37be6bd
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Component_63
+    100002: Component_63 1
+    100004: Component_63 2
+    100006: Component_63 3
+    100008: Component_63 4
+    100010: Component_63 5
+    100012: Component_64
+    100014: Component_64 1
+    100016: Component_64 2
+    100018: //RootNode
+    100020: ID14
+    100022: ID14 1
+    100024: ID14 2
+    100026: ID14 3
+    100028: ID14 4
+    100030: ID14 5
+    100032: ID22
+    100034: ID22 1
+    100036: ID22 2
+    100038: ID22 3
+    100040: ID22 4
+    100042: ID22 5
+    100044: instance_0
+    100046: instance_1
+    100048: instance_2
+    100050: instance_3
+    100052: instance_4
+    100054: instance_5
+    100056: instance_6
+    100058: instance_7
+    100060: instance_8
+    100062: Component_65
+    100064: Component_65 1
+    100066: Component_65 2
+    100068: Component_65 3
+    100070: Component_65 4
+    100072: Component_65 5
+    100074: Component_65 6
+    100076: ID54
+    100078: ID60
+    100080: ID66
+    100082: instance_10
+    100084: instance_11
+    100086: instance_9
+    100088: ID10
+    100090: ID100
+    100092: ID106
+    100094: ID16
+    100096: ID28
+    100098: ID38
+    100100: ID44
+    100102: ID52
+    100104: ID58
+    100106: ID64
+    100108: ID70
+    100110: ID76
+    100112: ID82
+    100114: ID88
+    100116: ID94
+    400000: Component_63
+    400002: Component_63 1
+    400004: Component_63 2
+    400006: Component_63 3
+    400008: Component_63 4
+    400010: Component_63 5
+    400012: Component_64
+    400014: Component_64 1
+    400016: Component_64 2
+    400018: //RootNode
+    400020: ID14
+    400022: ID14 1
+    400024: ID14 2
+    400026: ID14 3
+    400028: ID14 4
+    400030: ID14 5
+    400032: ID22
+    400034: ID22 1
+    400036: ID22 2
+    400038: ID22 3
+    400040: ID22 4
+    400042: ID22 5
+    400044: instance_0
+    400046: instance_1
+    400048: instance_2
+    400050: instance_3
+    400052: instance_4
+    400054: instance_5
+    400056: instance_6
+    400058: instance_7
+    400060: instance_8
+    400062: Component_65
+    400064: Component_65 1
+    400066: Component_65 2
+    400068: Component_65 3
+    400070: Component_65 4
+    400072: Component_65 5
+    400074: Component_65 6
+    400076: ID54
+    400078: ID60
+    400080: ID66
+    400082: instance_10
+    400084: instance_11
+    400086: instance_9
+    400088: ID10
+    400090: ID100
+    400092: ID106
+    400094: ID16
+    400096: ID28
+    400098: ID38
+    400100: ID44
+    400102: ID52
+    400104: ID58
+    400106: ID64
+    400108: ID70
+    400110: ID76
+    400112: ID82
+    400114: ID88
+    400116: ID94
+    2300000: Component_63
+    2300002: Component_63 1
+    2300004: Component_63 2
+    2300006: Component_63 3
+    2300008: Component_63 4
+    2300010: Component_63 5
+    2300012: Component_64
+    2300014: Component_64 1
+    2300016: Component_64 2
+    2300018: //RootNode
+    2300020: ID14
+    2300022: ID14 1
+    2300024: ID14 2
+    2300026: ID14 3
+    2300028: ID14 4
+    2300030: ID14 5
+    2300032: ID22
+    2300034: ID22 1
+    2300036: ID22 2
+    2300038: ID22 3
+    2300040: ID22 4
+    2300042: ID22 5
+    2300044: Component_65
+    2300046: Component_65 1
+    2300048: Component_65 2
+    2300050: Component_65 3
+    2300052: Component_65 4
+    2300054: Component_65 5
+    2300056: Component_65 6
+    2300058: ID54
+    2300060: ID60
+    2300062: ID66
+    2300064: ID10
+    2300066: ID100
+    2300068: ID106
+    2300070: ID16
+    2300072: ID28
+    2300074: ID38
+    2300076: ID44
+    2300078: ID52
+    2300080: ID58
+    2300082: ID64
+    2300084: ID70
+    2300086: ID76
+    2300088: ID82
+    2300090: ID88
+    2300092: ID94
+    3300000: Component_63
+    3300002: Component_63 1
+    3300004: Component_63 2
+    3300006: Component_63 3
+    3300008: Component_63 4
+    3300010: Component_63 5
+    3300012: Component_64
+    3300014: Component_64 1
+    3300016: Component_64 2
+    3300018: //RootNode
+    3300020: ID14
+    3300022: ID14 1
+    3300024: ID14 2
+    3300026: ID14 3
+    3300028: ID14 4
+    3300030: ID14 5
+    3300032: ID22
+    3300034: ID22 1
+    3300036: ID22 2
+    3300038: ID22 3
+    3300040: ID22 4
+    3300042: ID22 5
+    3300044: Component_65
+    3300046: Component_65 1
+    3300048: Component_65 2
+    3300050: Component_65 3
+    3300052: Component_65 4
+    3300054: Component_65 5
+    3300056: Component_65 6
+    3300058: ID54
+    3300060: ID60
+    3300062: ID66
+    3300064: ID10
+    3300066: ID100
+    3300068: ID106
+    3300070: ID16
+    3300072: ID28
+    3300074: ID38
+    3300076: ID44
+    3300078: ID52
+    3300080: ID58
+    3300082: ID64
+    3300084: ID70
+    3300086: ID76
+    3300088: ID82
+    3300090: ID88
+    3300092: ID94
+    4300000: SketchUp
+    4300002: Component_63
+    4300004: ID14
+    4300006: ID22
+    4300008: Component_64
+    4300010: ID54
+    4300012: ID60
+    4300014: ID66
+    4300016: Component_65
+    4300018: ID10
+    4300020: ID16
+    4300022: ID28
+    4300024: ID38
+    4300026: ID44
+    4300028: ID52
+    4300030: ID58
+    4300032: ID64
+    4300034: ID70
+    4300036: ID76
+    4300038: ID82
+    4300040: ID88
+    4300042: ID94
+    4300044: ID100
+    4300046: ID106
+    6400000: //RootNode
+    6400002: ID10
+    6400004: ID16
+    6400006: ID22
+    6400008: ID28
+    6400010: ID38
+    6400012: ID44
+    6400014: ID52
+    6400016: ID58
+    6400018: ID64
+    6400020: ID70
+    6400022: ID76
+    6400024: ID82
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .100000001
+    meshCompression: 3
+    addColliders: 1
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
