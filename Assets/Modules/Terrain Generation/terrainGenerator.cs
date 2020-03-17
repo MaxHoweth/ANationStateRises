@@ -31,8 +31,8 @@ public class terrainGenerator : MonoBehaviour {
 
 		//Application.LoadLevelAdditive("template_world");
 
-		generateTrees(200,1000,new Rect(-550,-550,550,550));//  new Vector2(-550,-550), new Vector2 (550,550)
-		generateRocks(200,1000,new Rect(-550,-550,550,550));
+		generateTrees(800,1500,-500,-500,1000);//  new Vector2(-550,-550), new Vector2 (550,550)
+		//generateRocks(200,1000,new Rect(-550,-550,550,550));
 
 		guiObj.SetActive(true);
 
@@ -40,13 +40,13 @@ public class terrainGenerator : MonoBehaviour {
 
 		}
 
-	public void generateTrees(int lowerLimit,int upperLimit,Rect rec) {   
+	public void generateTrees(int lowerLimit,int upperLimit,int startX, int startZ, int size) {   
 		int limitOfTrees = Random.Range(lowerLimit,upperLimit); 
-		Debug.Log ( "MAP GENERATOR:" + limitOfTrees + " Trees generated");
+		Debug.Log ( "MAP GENERATOR:" + limitOfTrees + " Trees generated" + " @:(" + startX + ","  + startZ + ")");
 
 		for(int x = 0;x < limitOfTrees; x++) {
-			int randomX = Mathf.RoundToInt(Random.Range(rec.xMin, rec.xMax));
-			int randomZ = Mathf.RoundToInt(Random.Range(rec.yMin, rec.yMax));
+			int randomX = Mathf.RoundToInt(Random.Range(startX, startX + size));
+			int randomZ = Mathf.RoundToInt(Random.Range(startZ, startZ + size));
 
 			GameObject obj = (GameObject)Instantiate(treePrefab, new Vector3(randomX,0,randomZ),Quaternion.identity);
 			obj.transform.eulerAngles = new Vector3(270,0,0);

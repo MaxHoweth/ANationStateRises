@@ -25,12 +25,12 @@ public class loadWallController : MonoBehaviour {
 
 	public void onChildTrigger(GameObject trig) {
 		if(trig == wallObjZpos) { 
-			terrainGeneratorObj.GetComponent<terrainGenerator>().generateTrees(2000,10000,new Rect(-550,550,1100,1100)); //new Vector2(-550,550),new Vector2(550,1650)
+			//terrainGeneratorObj.GetComponent<terrainGenerator>().generateTrees(2000,10000,new Rect(-550,550,1100,1100)); //new Vector2(-550,550),new Vector2(550,1650)
 			//needsToGenerateTrees = false;
 		}
 
 		if(trig == wallObjZneg) {
-			terrainGeneratorObj.GetComponent<terrainGenerator>().generateTrees(2000,10000,new Rect(-550,-1650,1100,1100));
+			//terrainGeneratorObj.GetComponent<terrainGenerator>().generateTrees(2000,10000,new Rect(-550,-1650,1100,1100));
 			//needsToGenerateTrees = false;
 		}
 
