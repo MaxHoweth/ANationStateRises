@@ -43,7 +43,7 @@ public class constructableObject : MonoBehaviour {
 			case "shrine"        : shrineUpdate();        break; 
 
 		}
-		Debug.Log (stepOfConstruction);
+		//Debug.Log (stepOfConstruction);
 		if (stepOfConstruction != prevStepOfConstruction) { 
 			needToInstantiate = true;
 		} 

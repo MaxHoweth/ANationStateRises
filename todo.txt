@@ -4,7 +4,7 @@ make people suffer from hunder and thirst and begin the game with limited suppli
 
 add the structures Home, Shrine, and Baraacks
 
-Fix the jobs menu( 50% done still needs an indicator about which button is selected or what the ais current job is)
+Fix the jobs menu( 50% done still needs an indicator about which button is selected)
 
 
 

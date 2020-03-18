@@ -15,12 +15,12 @@ public class cameraOperator : MonoBehaviour {
 	private void CheckCamera() {
 		if(Input.GetMouseButtonDown(0)) {   startClick = Input.mousePosition;   }
 		else if (Input.GetMouseButtonUp(0)) {
-			foreach(GameObject obj in GameObject.FindGameObjectsWithTag("tree")) {
+			foreach(GameObject obj in GameObject.FindGameObjectsWithTag("tree.unselected")) {
 				if(obj.GetComponent<Renderer>().isVisible && Vector3.Distance(this.transform.position, obj.transform.position) < selectionDistance ) {
 					Vector3 camPos = Camera.main.WorldToScreenPoint(obj.transform.position);
 					camPos.y = cameraOperator.InvertMouseY(camPos.y);
 
-					if(guiObject.GetComponent<gui>().isSelectingTrees && cameraOperator.selection.Contains(camPos)){ 
+					if(guiObject.GetComponent<UnityUI>().isSelectingTrees && cameraOperator.selection.Contains(camPos)){ 
 						obj.GetComponent<tree>().selected = true;  
 					}
 				}

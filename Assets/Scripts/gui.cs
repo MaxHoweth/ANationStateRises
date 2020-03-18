@@ -76,13 +76,14 @@ public class gui : MonoBehaviour {
 	}
 
 	void runGUIstate(float state) {
-	
+		
 		if (state == 0) {
-			/*
-			if(GUI.Button(new Rect(Screen.width - 80, 0, 80, 80),"To World View..")){
-				Application.LoadLevel("WorldView");
-			}
-			*/
+				/*
+				if(GUI.Button(new Rect(Screen.width - 80, 0, 80, 80),"To World View..")){
+					Application.LoadLevel("WorldView");
+				}
+				*/
+			
 			if(GUI.Button(new Rect(0,menuTopPos, buttonWidth, buttonHeight),"Orders")){
 				guiState = 4;
 			}
@@ -93,7 +94,7 @@ public class gui : MonoBehaviour {
 				guiState = 3;
 			}
 			if(GUI.Button(new Rect(buttonSpacing * 3,menuTopPos, buttonWidth, buttonHeight),"Production")){
-				
+
 			}
 			if(GUI.Button(new Rect(buttonSpacing * 4,menuTopPos, buttonWidth, buttonHeight),"Military")){
 				guiState = 6;
@@ -101,12 +102,13 @@ public class gui : MonoBehaviour {
 			if(GUI.Button(new Rect(buttonSpacing * 5,menuTopPos, buttonWidth, buttonHeight),"Jobs")){
 				guiState = 5;
 			}
-				}
+		}
+		
 		if (state == 1) {
 
 			if(GUI.Button(new Rect(buttonSpacing *5,menuTopPos, buttonWidth, buttonHeight),"Back...")){  guiState = 0;  }
 		}
-
+		/*
 		if(state == 2){
 
 			if(GUI.Button(new Rect(buttonSpacing ,menuTopPos, buttonWidth, buttonHeight),"Stockpiles")){
@@ -119,6 +121,7 @@ public class gui : MonoBehaviour {
 
 			if(GUI.Button(new Rect(buttonSpacing *5,menuTopPos, buttonWidth, buttonHeight),"Back...")){  guiState = 0;  }
 		}
+		*/
 
 		if (state == 3) {
 			if(GUI.Button(new Rect(0,menuTopPos, buttonWidth, 100),"Mine")){
@@ -149,6 +152,8 @@ public class gui : MonoBehaviour {
 
 
 				}
+
+		/*
 		if (state == 4) {
 			if(GUI.Button(new Rect(0,menuTopPos, buttonWidth, buttonHeight),"Fell Trees")){
 				this.isSelectingTrees = true;
@@ -158,7 +163,7 @@ public class gui : MonoBehaviour {
 				this.isSelectingTrees = false;
 			}
 		}
-
+		*/
 
 	
 
@@ -257,9 +262,6 @@ public class gui : MonoBehaviour {
 
 		int numberOfAis = 0;
 
-	
-		
-		
 		//---For each AI
 		//     Build a row with its name
 		//     Make the buttons Toggle so only one can be slected

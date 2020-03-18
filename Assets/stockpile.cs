@@ -14,7 +14,7 @@ public class stockpile : MonoBehaviour {
 	public GameObject logPrefab;
 
 	void Start () {
-	
+		
 	}
 	
 	// Update is called once per frame

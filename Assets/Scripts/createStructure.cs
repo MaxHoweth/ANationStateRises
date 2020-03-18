@@ -52,8 +52,9 @@ public class createStructure : MonoBehaviour {
 
 		if(currentModel == "stockpile") {      	  obj = stockpilePrefab; }
 
+		if (currentModel == "mine")	 { obj = mineHoloPrefab; }  //NEEDS WORK 
 
-		if(currentModel == "barracks") {       	  obj = barracksPrefab; }
+		if (currentModel == "barracks") {       	  obj = barracksPrefab; }
 
 
 		if (hasPlacedStructure) {   //if the structures been placed reset everything
@@ -102,7 +103,8 @@ public class createStructure : MonoBehaviour {
 				
 				}
 				if(currentModel == "stockpile") {
-					holoAtCursor  =	(GameObject)Instantiate(stockpilePrefab,hit.point + new Vector3(0,4,0),Quaternion.identity);
+					holoAtCursor  =	(GameObject)Instantiate(stockpilePrefab, hit.point ,Quaternion.identity);
+					
 					holoAtCursor.transform.eulerAngles = new Vector3(270,0,0);
 
 				}
@@ -140,7 +142,7 @@ public class createStructure : MonoBehaviour {
 					holoAtCursor.tag = "construction";   
 				}
 				if(currentModel == "stockpile")   {
-					holoAtCursor.transform.position = hit.point + new Vector3(0,0.2f,0); 
+					holoAtCursor.transform.position = hit.point + new Vector3(0,-0.2f,0); 
 					holoAtCursor.tag = "construction";  
 				}
 				if(currentModel == "barracks")    { holoAtCursor.transform.position = hit.point + new Vector3(0,0.2f,0);  holoAtCursor.tag = "construction";   }

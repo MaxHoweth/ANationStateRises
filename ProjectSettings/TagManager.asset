@@ -12,7 +12,6 @@ TagManager:
   - stockpilelog
   - construction
   - stone
-  - claimed_tree
   - claimed_log
   - shrine
   - deer
@@ -24,6 +23,10 @@ TagManager:
   - resc.log.carried
   - resc.log
   - resc.stoneblock
+  - tree.unselected
+  - tree.selected
+  - tree.claimed
+  - resc.log.claimed
   layers:
   - Default
   - TransparentFX

@@ -24,11 +24,11 @@ public class tree : MonoBehaviour{
 	void beenSelectedRuntime() {
 		if (selected == true && !hasGeneratedSelectedMarker) {
 			GameObject obj = (GameObject)Instantiate ((Object)selectedIndicatorPrefab);
-
-			obj.transform.parent = transform;
-			obj.transform.localPosition = new Vector3 (0, 0, 0);
-			obj.transform.eulerAngles = new Vector3(180,180,180);
+				obj.transform.parent = transform;
+				obj.transform.localPosition = new Vector3 (0, 0, 0);
+				obj.transform.eulerAngles = new Vector3(180,180,180);
 			hasGeneratedSelectedMarker = true;
+			gameObject.tag = "tree.selected";
 		}
 
 

@@ -60,11 +60,15 @@ public class Ai : MonoBehaviour {
 		thirst -= 0.002f;
 		hunger -= 0.001f;
 		faith += 0.002f;
+
 		if(faith > 30) {
 			//Debug.Log("Attempting to go to shrine"); this will eventually work to go the shrin but for now ais get stuck in job 25
 			//job = 25;
-
 		}
+
+		if(isSleeping) {
+			goToSleep();
+        }
 
 	}
 
@@ -110,12 +114,7 @@ public class Ai : MonoBehaviour {
 
 	}
 	void Update () {
-		if(isSleeping) {
-			transform.eulerAngles = new Vector3(90,0,0);
-			transform.position = new Vector3(transform.position.x,0.3f,transform.position.z);
-
-
-		}
+		
 
 		if(isPraying) {
 			Debug.Log(prayElapsedTime);
@@ -150,7 +149,7 @@ public class Ai : MonoBehaviour {
 		doJob ();
 
 
-		if(Input.GetMouseButtonDown(1)&& selected) {
+		if(Input.GetMouseButtonDown(1) && selected) {
 
 
 			RaycastHit hit = new RaycastHit();
@@ -222,8 +221,8 @@ public class Ai : MonoBehaviour {
 
 		}
 	void goToSleep() {
-
-
+			transform.eulerAngles = new Vector3(90, 0, 0);
+			transform.position = new Vector3(transform.position.x, 0.3f, transform.position.z);
 
 	}
 
@@ -239,28 +238,31 @@ public class Ai : MonoBehaviour {
 
 	void doJob() {
 	
-		if (job == 2) {   // logger job
-			if (target == null) {
+		if (job == 2) {   // LOGGER JOB
+			if (target == null)
+			{
 				//obj = returnNearestOfTag ("tree");
 
-				List<GameObject> targets = new List<GameObject> ();
+				List<GameObject> targets = new List<GameObject>();
 
-				foreach (GameObject gameObj in GameObject.FindGameObjectsWithTag("Player")) {  // Currently Picks a tree at random i would prefer it find the closest one
-					if (!targets.Contains (gameObj)) {  
-						targets.Add (gameObj.GetComponent<Ai> ().target);  
+				foreach (GameObject gameObj in GameObject.FindGameObjectsWithTag("Player"))
+				{  // Currently Picks a tree at random i would prefer it find the closest one
+					if (!targets.Contains(gameObj))
+					{
+						targets.Add(gameObj.GetComponent<Ai>().target);
 					}
 				}
-				foreach (GameObject gameObj in GameObject.FindGameObjectsWithTag("tree")) {  // Currently Picks a tree at random i would prefer it find the closest one
-					if (gameObj.GetComponent<tree> ().selected == true) {
-						if (!targets.Contains (gameObj)) {
-							target = gameObj;
-							moveTowardsVector = target.transform.position;
-							continue;
-							}
-						}
-					}
 
-				}
+				
+					GameObject targetTree = returnNearestOfTag("tree.selected");
+					target = targetTree;
+					moveTowardsVector = targetTree.transform.position;
+					targetTree.tag = "tree.claimed";
+				
+
+
+			}
+
 			if (target != null) {  
 				moveTowardsVector = target.transform.position;
 
@@ -273,7 +275,7 @@ public class Ai : MonoBehaviour {
 					}
 				}
 			}
-		if(job == 3) { 
+		if(job == 3) {   // HAULER JOB 
 			targetLog = returnNearestOfTag("log");    
 
 
@@ -328,9 +330,10 @@ public class Ai : MonoBehaviour {
 			//First look for stockpiles with logs
 			//If none are found find logs off the ground
 			if (!isCarrying) {
-				if (GameObject.FindGameObjectWithTag ("stockpilelog") == true) {
-					target = GameObject.FindGameObjectWithTag ("stockpilelog");
+
+				target = returnNearestOfTag("stockpilelog");
 					moveTowardsVector = target.transform.position;
+				
 
 					if (getDistance (target, transform.gameObject) < 2.4f ) {
 						startCarrying (target.transform.parent.GetComponent<stockpile> ().removeLogs (1, this.gameObject));
@@ -338,7 +341,7 @@ public class Ai : MonoBehaviour {
 						//target.gameObject.tag = "resc.log.carried";
 					}
 
-				}
+				
 				// find log source
 				//walk towards Logger source
 				//if dist to source is low enough pick up and begin carrying 
@@ -392,6 +395,7 @@ public class Ai : MonoBehaviour {
 		carryObject.GetComponent<Rigidbody>().isKinematic = true;
 		carryObject.transform.eulerAngles = transform.rotation.eulerAngles + new Vector3(270,0,0);
 		carryObject.transform.localPosition = new Vector3(0.9f,1,0);
+		carryObject.tag = "resc.log.carried";
 
 
 	}
@@ -443,7 +447,8 @@ public class Ai : MonoBehaviour {
 
 	IEnumerator followPath() {
 		path = pathFindingObj.GetComponent<Pathfinding>().grid.path;  //Grabs a path from PathFinding obj(How is this generated?)
-		Node currentWaypoint = path[0];								  //Sets current waypoint at the begging, 0
+
+			Node currentWaypoint = path[0];                               //Sets current waypoint at the begging, 0
 
 		while (getDistance(this.transform.position, moveTowardsVector) > 1.5f) {  // While distance between this and taget > 1.5
 			
@@ -553,8 +558,10 @@ public class Ai : MonoBehaviour {
 		Vector3 currentPosition = transform.position;
 
 		foreach(GameObject potentialTarget in objs) {
+
 			Vector3 directionToTarget = potentialTarget.transform.position - currentPosition;
 			float dSqrToTarget = directionToTarget.sqrMagnitude;
+
 			if(dSqrToTarget < closestDistanceSqr) {
 					closestDistanceSqr = dSqrToTarget;
 					bestTarget = potentialTarget;
