@@ -2691,7 +2691,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 472622394}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1578683601}
+        m_MethodName: onJobsMenuButtonPressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &472622394
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7513,6 +7524,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1546333883}
   m_CullTransparentMesh: 0
+--- !u!1 &1552807690
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1552807691}
+  - component: {fileID: 1552807692}
+  m_Layer: 0
+  m_Name: JobsMenu
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1552807691
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552807690}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1578683600}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: -603, y: -222.5}
+  m_SizeDelta: {x: 100, y: 385}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1552807692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552807690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 0
+  m_Spacing: 0
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 0
+  m_ChildControlWidth: 0
+  m_ChildControlHeight: 0
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
 --- !u!1 &1578683596
 GameObject:
   m_ObjectHideFlags: 0
@@ -7612,6 +7684,7 @@ RectTransform:
   - {fileID: 331196349}
   - {fileID: 1215320738}
   - {fileID: 253388247}
+  - {fileID: 1552807691}
   m_Father: {fileID: 0}
   m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7634,6 +7707,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainGenerator: {fileID: 1323380378}
   CreateStructure: {fileID: 1735010570}
+  JobsRowPrefab: {fileID: 2966891738694734648, guid: 34ead8971ef862e478f08f96d0aba6fe,
+    type: 3}
+  listOfAis: []
+  JobsMenu: {fileID: 1552807690}
   isSelectingTrees: 0
   MainMenuGroup: {fileID: 2040579583}
   NewGameLoadGameGroup: {fileID: 1617450915}

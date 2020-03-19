@@ -8,6 +8,11 @@ public class UnityUI : MonoBehaviour
     public GameObject CreateStructure;
 
 
+
+    public GameObject JobsRowPrefab;
+    public List<GameObject> listOfAis;
+    public GameObject JobsMenu;
+
     public bool isSelectingTrees = false; //PUBLIC BOOLEAN GRABBED BY CAMERAOPERATOR
 
 
@@ -29,6 +34,9 @@ public class UnityUI : MonoBehaviour
     bool isInOrdersMenu = false;
     bool isInConstructionMenu = false;
     bool isInStructuresMenu = false;
+
+    bool isInJobsMenu = false;
+    bool hasGeneratedJobsMenu = false;
 
 
     bool isGameUIActive = false;
@@ -70,6 +78,21 @@ public class UnityUI : MonoBehaviour
                 StructuresMenuGroup.active = false;
                 LowerBarGroup.active = true;
             }
+
+
+            if (isInJobsMenu) {
+                if (hasGeneratedJobsMenu == false) { 
+                    generateJobsMenu();
+                    hasGeneratedJobsMenu = true;
+                
+                }
+            }
+            else {
+                destroyJobsMenu();
+
+            }
+            
+            
         }
         else {
             LowerBarGroup.active = false;
@@ -127,7 +150,9 @@ public class UnityUI : MonoBehaviour
     public void onStructuresButtonPressed() {
         isInStructuresMenu = true;
     }
-
+    public void onJobsMenuButtonPressed() {
+        isInJobsMenu = !isInJobsMenu;
+    }
 
     //ORDERS MENU FUCTIONS
     public void onFellTreesButtonPressed() {
@@ -138,7 +163,7 @@ public class UnityUI : MonoBehaviour
         isInOrdersMenu = false;
     }
 
-    //CONSTRUCTION MENU FUCTIONS
+    //CONSTRUCTION MENU FUCTIONS 
     public void onStockpileButtonPressed() {
         CreateStructure.GetComponent<createStructure>().generateStructure("stockpile");
         //REGENERATE A* GRID @ A LATER DATE 
@@ -169,5 +194,102 @@ public class UnityUI : MonoBehaviour
 
 
 
+
+
+
+    void generateJobsMenu() {
+        int index = 0;
+        foreach (GameObject gameObj in GameObject.FindGameObjectsWithTag("Player")){
+            listOfAis.Add(gameObj);
+            string nameParsed = gameObj.name.Substring(7).Replace("_", " ");
+            createJobRow(nameParsed, gameObj.GetComponent<Ai>().job, index);
+            index += 1;
+        }
+        Debug.Log(listOfAis[0]);
+    }
+    void destroyJobsMenu() {
+        foreach (Transform child in JobsMenu.transform) {
+            GameObject.Destroy(child.gameObject);
+        }
+        listOfAis.Clear();
+        hasGeneratedJobsMenu = false;
+    }
+
+    void createJobRow(string _name, int _job, int _index) {
+        GameObject inst = Instantiate(JobsRowPrefab, new Vector3(0,0,0), new Quaternion(0, 0, 0, 0));
+        inst.transform.SetParent(JobsMenu.transform, false);
+        inst.name = "JobsRow" + _index;
+
+        GameObject nameLabelInstance = GameObject.Find("Canvas/JobsMenu/JobsRow" + _index + "/NameLabel");
+            nameLabelInstance.GetComponent<UnityEngine.UI.Text>().text = _name;
+
+        GameObject jobLabelInstance = GameObject.Find("Canvas/JobsMenu/JobsRow" + _index + "/JobLabel");
+            jobLabelInstance.GetComponent<UnityEngine.UI.Text>().text = convertJobIntToString(_job);
+
+        GameObject builderButtonInstance = GameObject.Find("Canvas/JobsMenu/JobsRow" + _index + "/BuilderButton");
+            builderButtonInstance.GetComponent<UnityEngine.UI.Button>().onClick.AddListener(delegate { changeJob(_index, 4); });
+
+        GameObject loggerButtonInstance = GameObject.Find("Canvas/JobsMenu/JobsRow" + _index + "/LoggerButton");
+            loggerButtonInstance.GetComponent<UnityEngine.UI.Button>().onClick.AddListener(delegate { changeJob(_index, 2); });
+
+        GameObject haulerButtonInstance = GameObject.Find("Canvas/JobsMenu/JobsRow" + _index + "/HaulerButton");
+            haulerButtonInstance.GetComponent<UnityEngine.UI.Button>().onClick.AddListener(delegate { changeJob(_index, 3); });
+    }
+
+
+
+    string convertJobIntToString(int input)
+    {
+        if (input == 0) { return "Unemployed"; }
+        else if (input == 2) { return "Logger"; }
+        else if (input == 3) { return "Hauler"; }
+        else if (input == 4) { return "Builder"; }
+
+        else { return "UNDEFINED"; }
+    }
+
+    public void changeJob(int _aiIndex, int _job) {
+        listOfAis[_aiIndex].GetComponent<Ai>().job = _job;
+        listOfAis[_aiIndex].GetComponent<Ai>().selected = false;
+        listOfAis[_aiIndex].GetComponent<Ai>().mouseOverrideSelected = false;
+
+    }
+
+    /*
+             if (!listOfAis.Contains(gameObj)) { listOfAis.Add(gameObj); }
+
+            GUI.Box(new Rect(30, ((numberOfAis + 1) * 25) + 6, Screen.width - 100, 20), "");   //Background Box
+                            string nameParsed = gameObj.name.Substring(7).Replace("_", " ");
+            GUI.Label(new Rect(30, ((numberOfAis + 1) * 25) + 6, 200, 20), " " + nameParsed + " "); // Labels the row with the Ais Name
+
+                GUI.Label(new Rect(180, ((numberOfAis + 1) * 25) + 6, 200, 20), convertJobIntToString(listOfAis[numberOfAis].GetComponent<Ai>().job)); // Display The AIs Current Job
+
+                if (GUI.Button(new Rect(300, ((numberOfAis + 1) * 25) + 6, 75, 20), "Logger"))
+                {
+                    listOfAis[numberOfAis].GetComponent<Ai>().job = 2;
+                    listOfAis[numberOfAis].GetComponent<Ai>().selected = false;
+                    listOfAis[numberOfAis].GetComponent<Ai>().mouseOverrideSelected = false;
+                }
+                if (GUI.Button(new Rect(390, ((numberOfAis + 1) * 25) + 6, 75, 20), "Hauler"))
+                {
+                    listOfAis[numberOfAis].GetComponent<Ai>().job = 3;
+                    listOfAis[numberOfAis].GetComponent<Ai>().selected = false;
+                    listOfAis[numberOfAis].GetComponent<Ai>().mouseOverrideSelected = false;
+
+                }
+                if (GUI.Button(new Rect(480, ((numberOfAis + 1) * 25) + 6, 75, 20), "Builder"))
+                {
+                    listOfAis[numberOfAis].GetComponent<Ai>().job = 4;
+                    listOfAis[numberOfAis].GetComponent<Ai>().selected = false;
+                    listOfAis[numberOfAis].GetComponent<Ai>().mouseOverrideSelected = false;
+                }
+
+
+                //gameObj.GetComponent<Ai>().job = jobMenuState;
+                //Debug.Log(gameObj.GetComponent<Ai>().job);
+                //Debug.Log(numberOfAis);
+                numberOfAis += 1;
+
+        */
 
 }
